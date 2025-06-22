@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>V2RAY SERVERS - DEV.69</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0f0f0f;
+      color: white;
+      padding: 20px;
+    }
+    h1 {
+      color: #00ffcc;
+    }
+    .server-box {
+      background-color: #1a1a1a;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-left: 5px solid #00ffcc;
+      border-radius: 8px;
+      word-break: break-word;
+    }
+    button {
+      background-color: #00ffcc;
+      color: black;
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+    .contact {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #333;
+      text-align: center;
+    }
+    .contact a {
+      color: #00ffcc;
+      text-decoration: none;
+      font-size: 16px;
+      background-color: #1a1a1a;
+      padding: 10px 15px;
+      border-radius: 8px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .contact a:hover {
+      background-color: #00ffcc;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌐 V2RAY SERVERS</h1>
+
+  <div class="server-box" id="server1">
+    vmess://eyJhZGQiOiJoZWxwLnR3aXR0ZXIuY29tIiwicG9ydCI6IjQ0MyIsInBzIjoiU2VydmVyIDEiLCAidHlwZSI6Im5vbmUiLCAidXNlciI6ImExYjJjM2Q0LWU1ZjYtNzg5MC1hYmNkLWVmMTIzNDU2Nzg5MCJ9
+  </div>
+
+  <div class="server-box" id="server2">
+    vless://a1b2c3d4-e5f6-7890-abcd-ef1234567890@help.twitter.com:443?encryption=none&security=tls&type=ws&host=Aspany.cloudt.com&path=/aspany#Server2
+  </div>
+
+  <button onclick="copyAll()">📋 Copy All Servers</button>
+
+  <div class="contact">
+    <p>📩 Need help or want a custom server?</p>
+    <a href="https://t.me/user_lagend" target="_blank">💬 Contact Admin</a>
+  </div>
+
+  <script>
+    function copyAll() {
+      const s1 = document.getElementById("server1").innerText;
+      const s2 = document.getElementById("server2").innerText;
+      const all = s1 + '\n\n' + s2;
+      navigator.clipboard.writeText(all);
+      alert("✅ All servers copied!");
+    }
+  </script>
+</body>
+  </html>
